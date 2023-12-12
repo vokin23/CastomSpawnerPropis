@@ -84,4 +84,4 @@ async def on_message(message):
                 await message.add_reaction("✅")
 
 
-client.run('MTE3NzE2NTI1MTgyMTcwNzI4NQ.GgOGUz.iY2al4msHNS9Pxni3ZaRTd5rWqMXH68Oj-d2_E')
+client.run('Token')
