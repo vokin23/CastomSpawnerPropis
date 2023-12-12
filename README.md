@@ -1,3 +1,2 @@
-<h1 align="center">Hi there, I'm <a href="https://daniilshat.ru/" target="_blank">Vokinsilok</a> 
-<img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/></h1>
-<h3 align="center">Computer science student, IT news writer from Russia 🇷🇺</h3>
+# CastomSpawnerPropis
+Данная программа автоматически парсит данные из определенного канала и записывает людей в CastomSpawner с указаннами параметрами в config.json
