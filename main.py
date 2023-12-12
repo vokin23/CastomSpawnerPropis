@@ -74,7 +74,18 @@ async def on_message(message):
                 with open('CustomSpawnPlayerConfig.txt', 'r', encoding='utf-8') as file:
                     lines = file.readlines()
 
-                filtered_lines = [line for line in lines if not any(steam_id in line for steam_id in steams_id)]
+                filtered_lines = []
+                for line in lines:
+                    first_occurrence = line.find("|")  # находим первое вхождение
+                    second_occurrence = line.find("|", first_occurrence + 1)
+                    gp_id = line[second_occurrence + 1]
+                    should_add = True
+                    for steam_id in steams_id:
+                        if steam_id in line and data[message.author.name]["group_id"] == gp_id:
+                            should_add = False
+                            break
+                    if should_add:
+                        filtered_lines.append(line)
 
                 with open('CustomSpawnPlayerConfig.txt', 'w') as file:
                     file.writelines(filtered_lines)
@@ -84,4 +95,4 @@ async def on_message(message):
                 await message.add_reaction("✅")
 
 
-client.run('MTE3NzE2NTI1MTgyMTcwNzI4NQ.GgOGUz.iY2al4msHNS9Pxni3ZaRTd5rWqMXH68Oj-d2_E')
+client.run('Токен')
